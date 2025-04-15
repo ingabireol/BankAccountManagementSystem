@@ -70,8 +70,7 @@ public class BankingSystem {
     public FixedDepositAccount createFixedDepositAccount(Person owner, double depositAmount,
                                                          int termInMonths, double interestRate) {
         String accountNumber = generateAccountNumber("FIX");
-        FixedDepositAccount account = new FixedDepositAccount(accountNumber, depositAmount, owner, 
-                                                            termInMonths, interestRate);
+        FixedDepositAccount account = new FixedDepositAccount(accountNumber, depositAmount, owner, termInMonths, interestRate);
         accounts.add(account);
         return account;
     }

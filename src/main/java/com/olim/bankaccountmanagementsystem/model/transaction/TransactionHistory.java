@@ -31,13 +31,11 @@ public class TransactionHistory {
         }
         
         // Insert at the beginning (most recent first)
-        if (head == null) {
-            head = transaction;
-        } else {
+        if (head != null) {
             transaction.setNext(head);
-            head = transaction;
         }
-        
+        head = transaction;
+
         count++;
     }
     
@@ -58,7 +56,6 @@ public class TransactionHistory {
             current = current.getNext();
             i++;
         }
-        
         return result;
     }
     

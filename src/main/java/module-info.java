@@ -11,5 +11,7 @@ module com.olim.bankaccountmanagementsystem {
             requires eu.hansolo.tilesfx;
         
     opens com.olim.bankaccountmanagementsystem to javafx.fxml;
+    opens com.olim.bankaccountmanagementsystem.controller to javafx.fxml;
     exports com.olim.bankaccountmanagementsystem;
+    exports com.olim.bankaccountmanagementsystem.controller;
 }

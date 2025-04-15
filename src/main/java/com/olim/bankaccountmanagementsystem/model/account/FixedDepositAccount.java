@@ -89,7 +89,6 @@ public class FixedDepositAccount extends Account {
      */
     public double calculateMaturityAmount() {
         // Simple interest calculation for demonstration
-        // In a real system, this would use compound interest formulas
         double termInYears = LocalDate.now().until(maturityDate).toTotalMonths() / 12.0;
         double interest = depositAmount * interestRate * termInYears;
         return depositAmount + interest;
